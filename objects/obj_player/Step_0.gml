@@ -5,6 +5,8 @@ prevmovespeed = movespeed;
 previcemovespeed = icemovespeed;
 prevxscale = xscale;
 
+is_holiday(holiday.halloween)
+
 // input buffers and coyote time
 if (key_slap2)
 	input_buffer_shoot = 10;

@@ -158,7 +158,6 @@ function achievement_unlock(_name, _display_name, _sprite, _index = 0)
 			ds_queue_enqueue(obj_achievementtracker.unlock_queue, [_sprite, _index]);
 		}
 	}
-	scr_steam_unlock_achievement(_name);
 	
 	// moved to separate function
 	/*
@@ -183,20 +182,6 @@ function achievement_unlock(_name, _display_name, _sprite, _index = 0)
 }
 function scr_steam_unlock_achievement(_achievement)
 {
-	if global.steam_api
-	{
-		var steamach = ds_map_find_value(global.steam_achievements, _achievement);
-		if !is_undefined(steamach)
-		{
-			trace("Steam achievement unlocked! ", steamach);
-			if !steam_get_achievement(steamach)
-				steam_set_achievement(steamach);
-		}
-		else
-			trace("Could not find steam achievement! ", _achievement);
-	}
-	else
-		trace("Steam API not initialized!");
 }
 function palette_unlock(_achievement, _palettename, _paletteselect, _texture = noone)
 {

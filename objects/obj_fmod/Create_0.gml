@@ -4,7 +4,7 @@ trace("Initializing FMOD: ", fmod_init(maxChannels));
 fmod_set_num_listeners(1);
 
 var plat = "Desktop";
-var banks = [concat("sound/", plat, "/Master.bank"), concat("sound/", plat, "/music.bank"), concat("sound/", plat, "/sfx.bank"), concat("sound/", plat, "/Master.strings.bank")];
+var banks = ["sound/Desktop/Master.strings.bank", "sound/Desktop/Master.bank", "sound/Desktop/music.bank", "sound/Desktop/sfx.bank", "sound/Desktop/mod-music.bank", "sound/Desktop/mod-sfx.bank"];
 trace("Loading banks! Platform -> ", plat);
 for (var i = 0; i < array_length(banks); i++)
 {
