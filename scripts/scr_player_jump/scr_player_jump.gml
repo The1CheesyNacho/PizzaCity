@@ -1,13 +1,5 @@
 function state_player_jump()
 {
-	var maxmovespeed = 8;
-	var maxmovespeed2 = 6;
-	var turnmovespeed = 2;
-	var accel = 0.5;
-	var deccel = 0.1;
-	var jumpspeed = -11;
-	var machspeed = 6;
-	
 	landAnim = true;
 	if (!momemtum)
 		hsp = move * movespeed;
@@ -24,11 +16,11 @@ function state_player_jump()
 	if (dir != xscale)
 	{
 		dir = xscale;
-		movespeed = turnmovespeed;
+		movespeed = 2;
 		facehurt = false;
 	}
 	if (move != xscale)
-		movespeed = turnmovespeed;
+		movespeed = 2;
 	move = key_left + key_right;
 	if (movespeed == 0)
 		momemtum = false;
@@ -40,17 +32,17 @@ function state_player_jump()
 	if (move != 0)
 	{
 		xscale = move;
-		if (movespeed < maxmovespeed)
-			movespeed += accel;
-		else if (floor(movespeed) == maxmovespeed)
-			movespeed = maxmovespeed2;
+		if (movespeed < 8)
+			movespeed += 0.5;
+		else if (floor(movespeed) == 8)
+			movespeed = 6;
 		if (scr_solid(x + xscale, y) && move == xscale)
 			movespeed = 0;
 	}
 	else
 		movespeed = 0;
-	if (movespeed > maxmovespeed)
-		movespeed -= deccel;
+	if (movespeed > 8)
+		movespeed -= 0.1;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (!jumpstop)
@@ -89,6 +81,16 @@ function state_player_jump()
 				doublejump = true;
 				particle_set_scale(particle.highjumpcloud2, xscale, 1);
 				create_particle(x, y, particle.highjumpcloud2, 0);
+if (key_jump)
+{
+    if (sprite_index != spr_playerN_glide)
+    {
+        sprite_index = spr_playerN_glide
+	    if (vsp > -14)
+		    vsp -= 0.5;
+    }
+}
+
 			}
 		}
 	}
@@ -120,7 +122,7 @@ function state_player_jump()
 		input_buffer_jump = 0;
 		scr_fmod_soundeffect(jumpsnd, x, y);
 		stompAnim = false;
-		vsp = jumpspeed;
+		vsp = -11;
 		state = states.jump;
 		jumpAnim = true;
 		jumpstop = false;
@@ -388,8 +390,8 @@ function state_player_jump()
 				sprite_index = spr_mach1;
 				image_index = 0;
 				state = states.mach2;
-				if (movespeed < machspeed)
-					movespeed = machspeed;
+				if (movespeed < 6)
+					movespeed = 6;
 			}
 			break;
 		case "V":
@@ -456,9 +458,9 @@ function state_player_jump()
 			}
 			if (key_attack && !pogochargeactive && !key_slap2 && pizzapepper == 0)
 			{
-				sprite_index = spr_playerN_pogostart;
+				sprite_index = spr_playerN_fall;
 				image_index = 0;
-				state = states.pogo;
+				state = states.normal;
 			}
 			break;
 	}
@@ -524,7 +526,7 @@ function state_pepperman_jump()
 		vsp = 14;
 		sprite_index = spr_bodyslamfall;
 	}
-	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw)
+	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw)
 	{
 		if (move != 0)
 			xscale = move;
@@ -559,6 +561,24 @@ function state_pepperman_jump()
 		with (instance_create(x, y, obj_taunteffect))
 			player = other.id;
 	}
+
+	if (grounded && sprite_index != spr_bodyslamland)
+	{
+		sprite_index = spr_bodyslamland;
+		image_index = 0;
+		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+		with (instance_create(x + (image_xscale * 40), y, obj_noisecrushertrail))
+			image_xscale = other.image_xscale;
+		with (instance_create(x - (image_xscale * 40), y, obj_noisecrushertrail))
+			image_xscale = -other.image_xscale;
+		with (obj_camera)
+		{
+			shake_mag = 5;
+			shake_mag_acc = 3 / room_speed;
+		}
+	}
+
+
 }
 function scr_player_jump()
 {

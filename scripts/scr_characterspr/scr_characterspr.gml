@@ -339,9 +339,9 @@ function scr_characterspr()
 		spr_knightpepdownslope = spr_playerN_knightdownslope
 		spr_knightpepstart = spr_playerN_knightsword
 		spr_knightpepcharge = spr_playerN_knightslide
-		spr_bodyslamstart = spr_playerN_bodyslamstart
-		spr_bodyslamfall = spr_playerN_bodyslam
-		spr_bodyslamland = spr_playerN_bodyslamland
+		spr_bodyslamstart = spr_noise_crusherjump
+		spr_bodyslamfall = spr_noise_crusherfall
+		spr_bodyslamland = spr_noise_crusherland
 		spr_crazyrun = spr_playerN_crazyrun
 		spr_bombpeprun = spr_playerN_bomb
 		spr_bombpepintro = spr_playerN_bombstart

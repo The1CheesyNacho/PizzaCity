@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "tdp_input_classes",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Systems/Input.yy",
+  "$GMScript":"",
+  "%Name":"tdp_input_classes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tdp_input_classes",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Systems/Input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

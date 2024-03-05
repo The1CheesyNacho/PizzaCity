@@ -16,7 +16,7 @@ draw_set_valign(fa_middle);
 draw_set_color(c_white);
 
 var _os = optionselected;
-var m = menus[menu];
+var m = typesmenus[menu];
 var options = m.options;
 var len = array_length(options);
 var size = (string_height("A") * len) + (len * m.ypad);

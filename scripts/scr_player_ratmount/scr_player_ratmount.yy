@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_player_ratmount",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "States",
-    "path": "folders/Scripts/Player/States.yy",
+  "$GMScript":"",
+  "%Name":"scr_player_ratmount",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_player_ratmount",
+  "parent":{
+    "name":"States",
+    "path":"folders/Scripts/Player/States.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

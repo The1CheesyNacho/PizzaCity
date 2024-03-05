@@ -54,6 +54,7 @@ add_music(boss_fakepep, "event:/music/boss/fakepep", -4, 0)
 add_music(boss_fakepephallway, "event:/music/boss/fakepepambient", -4, 0)
 add_music(boss_fakepepkey, "event:/music/pillarmusic", -4, 0)
 add_music(boss_noise, "event:/music/boss/noise", -4, 0)
+add_music(boss_mrstick, "event:/music/boss/noise", -4, 0)
 add_music(boss_pepperman, "event:/music/boss/pepperman", -4, 0)
 
 add_music(boss_pizzaface, "event:/music/boss/pizzaface", -4, false, function(room, parameter)

@@ -32,12 +32,19 @@ function scr_player_mach1()
 	{
 		if (movespeed <= 8)
 			movespeed += 0.075;
-		if (movespeed >= 8)
+		if (movespeed >= 8 && character != "N")
 		{
 			state = states.mach2;
 			particle_set_scale(particle.jumpdust, xscale, 1);
 			create_particle(x, y, particle.jumpdust, 0);
 		}
+		if (movespeed >= 4 && character == "N")
+		{
+			state = states.mach2;
+			particle_set_scale(particle.jumpdust, xscale, 1);
+			create_particle(x, y, particle.jumpdust, 0);
+		}
+		
 		if (vsp > 0)
 			jumpstop = false;
 		if (!instance_exists(dashcloudid))

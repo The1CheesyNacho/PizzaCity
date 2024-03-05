@@ -332,6 +332,35 @@ function state_player_normal()
 			jumpAnim = true;
 		state = states.jump;
 	}
+	
+if (character == "P")
+{
+    if (move != 0)
+    {
+        if (movespeed < 6)
+            movespeed += 0.5
+        else if (floor(movespeed) == 6)
+            movespeed = 6
+    }
+    else
+        movespeed = 0
+    if (movespeed > 6)
+        movespeed -= 0.1
+}
+if (character == "N")
+{
+    if (move != 0)
+    {
+        if (movespeed < 8)
+            movespeed += 0.40
+        else if (floor(movespeed) == 8)
+            movespeed = 10
+    }
+    else
+        movespeed = 0
+    if (movespeed > 10)
+        movespeed -= 0.6
+}
 	if (input_buffer_shoot > 0)
 	{
 		if (shotgunAnim)
@@ -383,22 +412,50 @@ function state_player_normal()
 			}
 			break;
 		case "N":
-			if (pogochargeactive || pizzapepper > 0)
+			if (key_shoot2 && !instance_exists(dynamite_inst))
 			{
-				if (key_attack2)
+				if (move == 0)
+					movespeed = 0;
+				state = states.dynamite;
+				sprite_index = spr_playerN_noisebombkick;
+				image_index = 0;
+				with (instance_create(x, y, obj_dynamite))
 				{
+				    sprite_index = spr_playerN_noisebomb;
+					image_xscale = other.xscale;
+					movespeed = 6;
+					vsp = -6;
+					other.dynamite_inst = id;
+					playerid = other.id;
+				}
+			}
+			if (key_chainsaw2)
+			{
+				sprite_index = spr_playerN_hookshot1;
+				state = states.hookshot
+			}
+			if (key_attack && state = states.mach3 && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)))
+			{
 					state = states.Sjumpprep;
 					image_index = 0;
 					sprite_index = !key_up ? spr_playerN_jetpackstart : spr_superjumpprep;
 					hsp = 0;
 					vsp = 0;
-				}
 			}
-			else if (key_attack && !key_slap2)
+			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
 			{
-				sprite_index = spr_playerN_pogostart;
+				sprite_index = spr_mach1;
 				image_index = 0;
-				state = states.pogo;
+				state = states.mach2;
+				if (movespeed < 6)
+					movespeed = 6;
+			}
+			if (global.kungfu && key_attack && state != states.handstandjump)
+			{
+				state = states.blockstance;
+				sprite_index = spr_player_airattack;
+				hsp = 0;
+				movespeed = 0;
 			}
 			break;
 		case "V":

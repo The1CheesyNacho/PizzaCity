@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "is_bossroom",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Boss",
-    "path": "folders/Scripts/Baddies/Boss.yy",
+  "$GMScript":"",
+  "%Name":"is_bossroom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"is_bossroom",
+  "parent":{
+    "name":"Boss",
+    "path":"folders/Scripts/Baddies/Boss.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

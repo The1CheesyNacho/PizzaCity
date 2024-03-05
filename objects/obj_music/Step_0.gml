@@ -39,7 +39,7 @@ if (global.panic)
 	{
 		trace("Starting panic music: step");
 		panicstart = true;
-		if (room != tower_finalhallway)
+		if (room != dragonlair_1)
 		{
 			fmod_event_instance_play(panicmusicID);
 			fmod_event_instance_set_paused(panicmusicID, false);
@@ -50,7 +50,7 @@ if (global.panic)
 			fmod_event_instance_stop(music.event, true);
 			fmod_event_instance_stop(music.event_secret, true);
 		}
-		if (room == tower_finalhallway)
+		if (room == dragonlair_1)
 		{
 			exitmusic = true;
 			fmod_event_instance_stop(panicmusicID);

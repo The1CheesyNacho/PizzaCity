@@ -145,6 +145,22 @@ function scr_player_freefall()
 			freefallstart = 0;
 		}
 	}
+	if (grounded && sprite_index != spr_bodyslamland)
+	{
+		sprite_index = spr_bodyslamland;
+		image_index = 0;
+		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+		with (instance_create(x + (image_xscale * 40), y, obj_noisecrushertrail))
+			image_xscale = other.image_xscale;
+		with (instance_create(x - (image_xscale * 40), y, obj_noisecrushertrail))
+			image_xscale = -other.image_xscale;
+		with (obj_camera)
+		{
+			shake_mag = 5;
+			shake_mag_acc = 3 / room_speed;
+		}
+	}
+	
 	image_speed = 0.35;
 	if (sprite_index == spr_bodyslamstart)
 		image_speed = 0.4;

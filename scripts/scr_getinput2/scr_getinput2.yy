@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_getinput2",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Systems/Input.yy",
+  "$GMScript":"",
+  "%Name":"scr_getinput2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_getinput2",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Systems/Input.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

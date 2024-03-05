@@ -1,18 +1,3 @@
-enum menus
-{
-	options, // categories.
-	audio,
-	video,
-	window,
-	resolution,
-	unused_1, // 5, related to video.
-	game,
-	controls,
-	controller,
-	keyboard,
-	deadzone,
-	unused_3, // 11, related to controls.
-}
 enum anchor
 {
 	center,
@@ -325,9 +310,9 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 	obj_savesystem.ini_str_options = ini_close()
 	with (obj_option)
 	{
-		for (i = 0; i < array_length(menus); i++)
+		for (i = 0; i < array_length(typesmenus); i++)
 		{
-			b = menus[i]
+			b = typesmenus[i]
 			if (b.menu_id == menus.controller || b.menu_id == menus.deadzone || b.menu_id == menus.keyboard)
 			{
 				for (var j = 0; j < array_length(b.options); j++)

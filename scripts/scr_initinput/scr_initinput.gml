@@ -38,6 +38,7 @@ function scr_initinput(open_savedata = true)
     tdp_input_ini_read("player_slap", [tdp_action(tdp_type.keyboard, ord("X"))]);
     tdp_input_ini_read("player_taunt", [tdp_action(tdp_type.keyboard, ord("C"))]);
     tdp_input_ini_read("player_shoot", [tdp_action(tdp_type.keyboard, ord("A"))]);
+    tdp_input_ini_read("player_chainsaw", [tdp_action(tdp_type.keyboard, ord("V"))]);
     tdp_input_ini_read("player_attack", [tdp_action(tdp_type.keyboard, vk_shift)]);
     tdp_input_ini_read("player_groundpound", []);
     tdp_input_ini_read("player_superjump", []);
@@ -51,6 +52,7 @@ function scr_initinput(open_savedata = true)
     tdp_input_ini_read("player_shootC", [tdp_action(tdp_type.gamepad, gp_face2)]);
     tdp_input_ini_read("player_attackC", [tdp_action(tdp_type.gamepad, gp_shoulderrb), tdp_action(tdp_type.gamepad, gp_shoulderr)]);
     tdp_input_ini_read("player_groundpoundC", []);
+    tdp_input_ini_read("player_chainsawC",  [tdp_action(tdp_type.gamepad, gp_shoulderlb), tdp_action(tdp_type.gamepad, gp_shoulderl)]);
     tdp_input_ini_read("player_superjumpC", []);
 	
 	global.key_up = ini_read_string("ControlsKeys", "up", vk_up);

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "cutscene_waitfor_dialog",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Cutscene",
-    "path": "folders/Scripts/Cutscene.yy",
+  "$GMScript":"",
+  "%Name":"cutscene_waitfor_dialog",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cutscene_waitfor_dialog",
+  "parent":{
+    "name":"Cutscene",
+    "path":"folders/Scripts/Cutscene.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

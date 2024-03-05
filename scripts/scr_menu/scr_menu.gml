@@ -1,3 +1,18 @@
+enum typesmenus
+{
+	options, // categories.
+	audio,
+	video,
+	window,
+	resolution,
+	unused_1, // 5, related to video.
+	game,
+	controls,
+	controller,
+	keyboard,
+	deadzone,
+	typesmenus, // 11, related to controls.
+}
 enum menutype
 {
 	toggle,
@@ -10,9 +25,9 @@ enum menutype
 function menu_goto(menu_id)
 {
 	menu = 0;
-	for (var i = 0; i < array_length(menus); i++)
+	for (var i = 0; i < array_length(typesmenus); i++)
 	{
-		var b = menus[i];
+		var b = typesmenus[i];
 		if b.menu_id == menu_id
 		{
 			menu = i;
