@@ -647,7 +647,7 @@ function scr_characterspr()
 		spr_palette = spr_peppalette
 		paletteselect = 0
 	}
-	if (obj_player.character == "M")
+	if (obj_player.character == "PM")
 	{
         panicmusicID = fmod_event_create_instance("event:/music/pepperohio");
 		spr_idle = spr_pepperman_idle

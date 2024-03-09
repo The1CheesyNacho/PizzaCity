@@ -106,7 +106,6 @@ if (obj_player1.key_jump && selected == 3 && obj_noiseselect.sprite_index != spr
 	}
 	alarm[0] = 100;
 }
-
 if (obj_player1.key_jump && selected == 4 && obj_noiseselect.sprite_index != spr_noiseselected)
 {
 	ready = true;
@@ -114,7 +113,7 @@ if (obj_player1.key_jump && selected == 4 && obj_noiseselect.sprite_index != spr
 	obj_noiseselect.image_index = 0;
 	with (obj_player1)
 	{
-		character = "M";
+		character = "PM";
 		ispeppino = false;
 		brick = false
 		isgustavo = false
