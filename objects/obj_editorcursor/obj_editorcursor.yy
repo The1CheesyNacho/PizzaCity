@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Editor",
-    "path":"folders/Objects/Unused/Editor.yy",
+    "path":"folders/Objects/Controllers/Unused/Editor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

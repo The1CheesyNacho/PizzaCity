@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_pizzacollect1halloween",
   "bboxMode":0,
-  "bbox_bottom":61,
+  "bbox_bottom":63,
   "bbox_left":5,
   "bbox_right":59,
   "bbox_top":6,

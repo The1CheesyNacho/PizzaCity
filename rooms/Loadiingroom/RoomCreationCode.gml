@@ -2,7 +2,7 @@ pal_swap_init_system_fix(shd_pal_swapper);
 global.roommessage = "PIZZA TOWER WESTERN BUILD V3";
 global.longintro = true;
 
-global.holiday = holiday.none;
+global.holiday = holiday.halloween;
 var date = date_current_datetime();
 var month = date_get_month(date);
 var day = date_get_day(date);

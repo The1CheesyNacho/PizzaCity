@@ -514,7 +514,6 @@ if (character == "N")
 }
 function state_pepperman_normal()
 {
-	pepperman_grab_reset();
 	move = key_left + key_right;
 	if (move != 0 && move == sign(xscale) && movespeed < pepperman_maxhsp_normal)
 		movespeed += pepperman_accel;
@@ -571,6 +570,20 @@ function state_pepperman_normal()
 	}
 	if (move != 0 && floor(image_index) != 4 && floor(image_index) != 11)
 		steppy = false;
+	scr_dotaunt();
+	
+	
+	if (input_buffer_slap > 0 && !key_up && shotgunAnim == 0 && !global.pistol)
+	{
+		input_buffer_slap = 0;
+		particle_set_scale(particle.jumpdust, xscale, 1);
+		create_particle(x, y, particle.jumpdust, 0);
+		fmod_event_instance_play(suplexdashsnd);
+		state = states.slap;
+		image_index = 0;
+	}
+	
+	
 }
 function pepperman_grab_reset()
 {

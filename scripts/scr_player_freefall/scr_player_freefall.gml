@@ -145,7 +145,7 @@ function scr_player_freefall()
 			freefallstart = 0;
 		}
 	}
-	if (grounded && sprite_index != spr_bodyslamland)
+	if ((place_meeting(x, y, obj_solid)) && sprite_index != spr_bodyslamland && character == "N")
 	{
 		sprite_index = spr_bodyslamland;
 		image_index = 0;

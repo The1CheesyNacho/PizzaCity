@@ -1,7 +1,7 @@
-targetRoom = space_1;
-level = "space";
+targetRoom = pinball_1;
+level = "pinball";
 sprite_index = spr_gate_space;
-bgsprite = spr_gate_spaceBG;
+bgsprite = bg_pinball2;
 title_index = 0;
 title_sprite = spr_titlecards_title2;
 titlecard_index = 10;

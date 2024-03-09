@@ -1,4 +1,5 @@
 prevpillar_on_camera = pillar_on_camera;
+scr_characterspr()
 if (fmod_event_instance_is_playing(kidspartychaseID) && instance_exists(obj_pause) && !obj_pause.pause && !instance_exists(obj_monster))
 {
 	trace("Stopping kidsparty music");
@@ -41,12 +42,14 @@ if (global.panic)
 		panicstart = true;
 		if (room != dragonlair_1)
 		{
+	        scr_characterspr()
 			fmod_event_instance_play(panicmusicID);
 			fmod_event_instance_set_paused(panicmusicID, false);
 			fmod_event_instance_set_parameter(panicmusicID, "state", 0, true);
 		}
 		if (music != -4)
 		{
+			scr_characterspr()
 			fmod_event_instance_stop(music.event, true);
 			fmod_event_instance_stop(music.event_secret, true);
 		}

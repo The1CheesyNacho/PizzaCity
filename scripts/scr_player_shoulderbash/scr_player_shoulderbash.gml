@@ -22,7 +22,7 @@ function scr_player_shoulderbash()
 		jumpstop = false;
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
 	{
-		vsp /= 20;
+		vsp /= 60;
 		jumpstop = true;
 	}
 	if (input_buffer_jump > 0 && can_jump)

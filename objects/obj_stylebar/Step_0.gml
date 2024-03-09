@@ -1,4 +1,3 @@
-/*
 visible = obj_tv.visible;
 switch global.stylethreshold
 {
@@ -92,4 +91,4 @@ else if !(room == rank_room or room == timesuproom or room == boss_room1 or room
 
 index += 0.35;
 global.stylemultiplier = (global.style + (global.stylethreshold * 55)) / 220;
-*/
+

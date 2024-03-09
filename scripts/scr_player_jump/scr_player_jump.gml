@@ -562,7 +562,7 @@ function state_pepperman_jump()
 			player = other.id;
 	}
 
-	if (grounded && sprite_index != spr_bodyslamland)
+	if (grounded && sprite_index != spr_bodyslamland && character == "N")
 	{
 		sprite_index = spr_bodyslamland;
 		image_index = 0;

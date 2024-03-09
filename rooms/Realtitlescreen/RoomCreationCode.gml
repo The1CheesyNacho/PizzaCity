@@ -306,6 +306,7 @@ enum states
 	UNKNOWN_4, // 303, used by obj_stickhat
 }
 
+obj_player.state = states.normal;
 global.coop = false;
 global.currentsavefile = 1;
 var achievement_arr = ["sranks1", "sranks2", "sranks3", "sranks4", "sranks5"];
@@ -433,14 +434,4 @@ global.mrstickcutscene3 = -4;
 global.chateauswap = -4;
 global.warcutscene = -4;
 pal_swap_init_system(shd_pal_swapper);
-with (obj_player1)
-	state = states.normal;
 global.loadeditor = false;
-if (global.longintro)
-{
-	global.longintro = false;
-	room_goto(Longintro);
-}
-else
-	room_goto(Mainmenu);
-instance_destroy(obj_cutscene_handler);

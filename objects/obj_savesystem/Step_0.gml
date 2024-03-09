@@ -19,7 +19,7 @@ if (room == hub_loadingscreen && state != 2)
 			ini_close();
 			if (_intro)
 			{
-				targetRoom = tower_entrancehall;
+				targetRoom = Realtitlescreen;
 				targetDoor = "A";
 				state = states.victory;
 			}

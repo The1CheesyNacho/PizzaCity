@@ -839,8 +839,6 @@ else
 		invhurt_buffer = invhurt_max;
 	hurt_buffer = -1;
 }
-if ((room == Realtitlescreen && instance_exists(obj_mainmenuselect)) || room == Mainmenu || room == Longintro || room == Endingroom || room == Creditsroom || room == Johnresurrectionroom)
-	state = states.titlescreen;
 if (wallclingcooldown < 10)
 	wallclingcooldown++;
 if (boxxedspinbuffer > 0)
@@ -1186,7 +1184,7 @@ if (restartbuffer > 0)
 	restartbuffer--;
 if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalhallway) && restartbuffer <= 0 && !verticalhallway && state != states.dead && state != states.gotoplayer && !global.levelreset && room != boss_pizzaface && room != tower_outside && room != boss_pizzafacefinale && state != states.dead && !instance_exists(obj_backtohub_fadeout) && state != states.backtohub)
 {
-	if (room != Mainmenu && room != tower_outside && room != Realtitlescreen && room != Longintro && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom && room != rank_room)
+	if (room != Mainmenu && room != tower_outside && room != Longintro && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom && room != rank_room)
 	{
 		visible = true;
 		with (obj_camera)
@@ -1222,6 +1220,11 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
 		x = -100;
 		y = -100;
 	}
+}
+if (character == "G")
+{
+	if (state == states.normal)
+		state = states.ratmount;
 }
 if (character == "S")
 {

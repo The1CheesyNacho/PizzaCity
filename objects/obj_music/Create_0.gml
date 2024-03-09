@@ -12,14 +12,13 @@ savedpanicpos = 0;
 savedmusicpos = 0;
 exitmusic = false;
 pillarmusicID = fmod_event_create_instance("event:/music/pillarmusic");
-panicmusicID = fmod_event_create_instance("event:/music/pizzatime");
 kidspartychaseID = fmod_event_create_instance("event:/music/w5/kidspartychase");
 panicstart = false;
 
+add_music(pinball_1, "event:/music/w3/space", "event:/music/w3/spacesecret", 0)
 add_music(exit_1, "event:/music/finalescape", -4, false);
 add_music(dragonlair_1, "event:/music/dragonlair", -4, false);
 add_music(characterselect, "event:/music/characterselect", -4, false);
-add_music(floor2_room9, "event:/music/mansion", "event:/music/w1/dungeonsecret", 0)
 add_music(Endingroom, "event:/music/ending", -4, false);
 add_music(Endingroom, "event:/music/ending", -4, false);
 add_music(Creditsroom, "event:/music/credits", -4, false);
@@ -28,10 +27,7 @@ add_music(Longintro, "event:/music/intro", -4, false, function(room, parameter)
 {
 	fmod_event_instance_set_parameter(parameter, "state", 0, true);
 });
-add_music(Mainmenu, "event:/music/title", -4, false, function(room, parameter)
-{
-	fmod_event_instance_set_parameter(parameter, "state", 0, true);
-});
+add_music(Realtitlescreen, "event:/music/title", -4, false);
 
 add_music(tower_tutorial1, "event:/music/tutorial", "event:/music/pillarmusic", 0)
 add_music(tower_entrancehall, "event:/music/hub", "event:/music/pillarmusic", 0, hub_state)
@@ -239,7 +235,27 @@ add_music(kidsparty_1, "event:/music/w5/kidsparty", "event:/music/w5/kidspartyse
 add_music(war_1, "event:/music/w5/war", "event:/music/w5/warsecret", 0)
 
 
+add_music(mansion_plain, "event:/music/mansion", "event:/music/w1/dungeonsecret", 0, function(room, event, event_secret) //anon_gml_Object_obj_music_Create_0_3410_gml_Object_obj_music_Create_0
+{
+	s = -1
+	switch room
+	{
+		case mansion_plain:
+			s = 0
+			break
+		case mansion_3:
+			s = 1
+			break
+		case mansion_9:
+			s = 2
+			break
+	}
 
+	if (s != -1)
+		fmod_event_instance_set_parameter(event, "state", s, 1)
+	return;
+}
+)
 
 add_music(strongcold_9, "event:/music/w1/strongcold", "event:/music/w1/dungeonsecret", 0, function(room, event, event_secret) //anon_gml_Object_obj_music_Create_0_3410_gml_Object_obj_music_Create_0
 {

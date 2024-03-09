@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_halloweencollectibles3",
   "bboxMode":0,
-  "bbox_bottom":28,
+  "bbox_bottom":27,
   "bbox_left":5,
   "bbox_right":29,
   "bbox_top":3,

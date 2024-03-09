@@ -78,3 +78,40 @@ if (state != states.hit)
 	player_instakillmove = false;
 if (fmod_event_instance_is_playing(chargesnd) && state != states.charge)
 	fmod_event_instance_stop(chargesnd);
+
+if (global.stylethreshold >= 3 && instance_exists(obj_baddie))
+{
+    with (obj_baddie)
+    {
+        movespeed = 2.75
+        elite = 1
+        whoopass = 1
+    }
+}
+else if (global.stylethreshold >= 2 && instance_exists(obj_baddie))
+{
+    with (obj_baddie)
+    {
+        movespeed = 1.75
+        elite = 0
+        whoopass = 0
+    }
+}
+else if (global.stylethreshold >= 1 && instance_exists(obj_baddie))
+{
+    with (obj_baddie)
+    {
+        movespeed = 1
+        elite = 0
+        whoopass = 0
+    }
+}
+else if (global.stylethreshold >= 4 && instance_exists(obj_baddie))
+{
+    with (obj_baddie)
+    {
+        movespeed = 3.5
+        elite = 1
+        whoopass = 1
+    }
+}

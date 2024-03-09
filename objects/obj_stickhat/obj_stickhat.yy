@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Stick Game?",
-    "path":"folders/Objects/Unused/Stick Game?.yy",
+    "path":"folders/Objects/Controllers/Unused/Stick Game?.yy",
   },
   "parentObjectId":null,
   "persistent":false,

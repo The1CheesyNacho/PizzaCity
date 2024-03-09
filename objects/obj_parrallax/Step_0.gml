@@ -55,6 +55,14 @@ for (var i = 0; i < array_length(lay_arr); i++)
 			layer_x(lay, _cam_x * 0.11);
 			layer_y(lay, _cam_y);
 			break;
+		case "Backgrounds_H2":
+			layer_x(lay, _cam_x * 0.11);
+			layer_y(lay, _cam_y);
+			break;
+		case "Backgrounds_H3":
+			layer_x(lay, _cam_x * 0.11);
+			layer_y(lay, _cam_y);
+			break;
 		case "Backgrounds_sky":
 			layer_x(lay, _cam_x * 0.25);
 			layer_y(lay, _cam_y * 0.25);

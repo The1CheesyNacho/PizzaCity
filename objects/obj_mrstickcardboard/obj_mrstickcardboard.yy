@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Unused",
-    "path":"folders/Objects/Unused.yy",
+    "path":"folders/Objects/Controllers/Unused.yy",
   },
   "parentObjectId":null,
   "persistent":false,

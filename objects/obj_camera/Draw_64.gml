@@ -43,27 +43,28 @@ if (obj_player.state != states.dead)
 		else
 			pizzascore_index = 0;
 	}
-	var sw = sprite_get_width(spr_heatmeter_fill);
-	var sh = sprite_get_height(spr_heatmeter_fill);
-	var b = 0;
-	var hud_xx = 121 + irandom_range(-collect_shake, collect_shake);
-	var hud_yy = 90 + irandom_range(-collect_shake, collect_shake) + hud_posY;
-	draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, sw * b, sh, hud_xx - 95, hud_yy + 24);
-	shader_set(global.Pal_Shader);
-	pal_swap_set(spr_heatmeter_palette, global.stylethreshold, false);
-	reset_shader_fix();
-	draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	var _score = global.collect;
+    var sw = sprite_get_width(spr_heatmeter_fill)
+    var sh = sprite_get_height(spr_heatmeter_fill)
+    var b = global.stylemultiplier
+    var hud_xx = (121 + irandom_range((-collect_shake), collect_shake))
+    var hud_yy = ((70 + irandom_range((-collect_shake), collect_shake)) + hud_posY)
+    draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
+    shader_set(global.Pal_Shader)
+    pal_swap_set(162, global.stylethreshold, 0)
+    draw_sprite_ext(spr_heatmeter, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    shader_reset()
+    draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    var _score = global.collect
 	if (global.coop)
 		_score += global.collectN;
-	if (_score >= global.crank)
-		draw_sprite_ext(spr_pizzascore_pepper, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.brank)
-		draw_sprite_ext(spr_pizzascore_pepperoni, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.arank)
-		draw_sprite_ext(spr_pizzascore_olive, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.srank)
-		draw_sprite_ext(spr_pizzascore_shroom, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
+    if (_score >= global.crank)
+        draw_sprite_ext(spr_pizzascore_pepper, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    if (_score >= global.brank)
+        draw_sprite_ext(spr_pizzascore_pepperoni, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    if (_score >= global.arank)
+        draw_sprite_ext(spr_pizzascore_olive, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
+    if (_score >= global.srank)
+        draw_sprite_ext(spr_pizzascore_shroom, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha)
 	var rx = hud_xx + 142;
 	var ry = hud_yy - 22;
 	var rank_ix = 0;
@@ -151,27 +152,27 @@ if (obj_player.state != states.dead)
 	var sc = _score - global.comboscore - cs;
 	if (sc < 0)
 		sc = 0;
-	var str = string(sc);
-	var num = string_length(str);
-	var w = string_width(str);
-	var xx = hud_xx - (w / 2);
-	if (lastcollect != sc)
-	{
-		color_array = array_create(num, 0);
-		for (i = 0; i < array_length(color_array); i++)
-			color_array[i] = choose(irandom(3));
-		lastcollect = sc;
-	}
-	shader_set(global.Pal_Shader);
-	draw_set_alpha(alpha);
-	for (i = 0; i < num; i++)
-	{
-		var yy = (((i + 1) % 2) == 0) ? -5 : 0;
-		var c = color_array[i];
-		pal_swap_set(spr_font_palette, c, false);
-		draw_text(floor(xx), floor((hud_yy - 56) + text_y + yy), string_char_at(str, i + 1));
-		xx += (w / num);
-	}
+    var str = string(_score)
+    var num = string_length(str)
+    var w = string_width(str)
+    var xx = (hud_xx - (w / 2))
+    if (lastcollect != _score)
+    {
+        color_array = array_create(num, 0)
+        for (var i = 0; i < array_length(color_array); i++)
+            color_array[i] = choose(irandom(3))
+        lastcollect = _score
+    }
+    shader_set(global.Pal_Shader)
+    draw_set_alpha(alpha)
+    for (i = 0; i < num; i++)
+    {
+        var yy = (((i + 1) % 2) == 0 ? -5 : 0)
+        var c = color_array[i]
+        pal_swap_set(259, c, 0)
+        draw_text(xx, (((hud_yy - 56) + text_y) + yy), string_char_at(str, (i + 1)))
+        xx += (w / num)
+    }
 	draw_set_alpha(1);
 	reset_shader_fix();
 	draw_set_font(lang_get_font("bigfont"));
