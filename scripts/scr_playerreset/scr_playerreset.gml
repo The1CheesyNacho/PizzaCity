@@ -185,6 +185,10 @@ function scr_playerreset()
 		global.tomatofollow = false;
 		global.sausagefollow = false;
 		global.pineapplefollow = false;
+		global.mushfollow = false;
+		global.olivefollow = false;
+		global.onionfollow = false;
+		global.brocollifollow = false;
 		global.keyget = false;
 		global.collect = 0;
 		global.collectN = 0;

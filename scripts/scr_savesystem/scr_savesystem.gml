@@ -31,7 +31,7 @@ function get_percentage()
 		if (ini_read_real("Treasure", level, false))
 			count++;
 		var tc = 0;
-		for (var j = 0; j < 5; j++)
+		for (var j = 0; j < 8; j++)
 		{
 			if (ini_read_real("Toppin", concat(level, j + 1), false))
 				count++;

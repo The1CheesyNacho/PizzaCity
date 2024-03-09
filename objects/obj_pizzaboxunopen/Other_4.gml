@@ -12,5 +12,15 @@ if (content == obj_pizzakinsausage && global.sausagefollow)
 	instance_destroy();
 if (content == obj_pizzakinpineapple && global.pineapplefollow)
 	instance_destroy();
+	
+if (content == obj_pizzakinmush && global.mushfollow)
+	instance_destroy();
+if (content == obj_pizzakinonion && global.onionfollow)
+	instance_destroy();
+if (content == obj_pizzakinolive&& global.olivefollow)
+	instance_destroy();
+if (content == obj_pizzakinbrocolli&& global.brocollifollow)
+	instance_destroy();
+	
 if (global.snickchallenge == 1)
 	instance_destroy();

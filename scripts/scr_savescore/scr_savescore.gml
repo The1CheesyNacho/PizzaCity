@@ -36,7 +36,11 @@ function scr_savescore(level)
 	global.newtoppin[1] = false;
 	global.newtoppin[2] = false;
 	global.newtoppin[3] = false;
-	global.newtoppin[4] = false;
+	global.newtoppin[4] = false
+	global.newtoppin[5] = false;
+	global.newtoppin[6] = false;
+	global.newtoppin[7] = false;
+	global.newtoppin[8] = false;
 	if (ini_read_real("Toppin", level + "1", false) == 0)
 	{
 		if (global.shroomfollow)
@@ -66,6 +70,30 @@ function scr_savescore(level)
 		if (global.pineapplefollow)
 			global.newtoppin[4] = true;
 		ini_write_real("Toppin", level + "5", global.pineapplefollow);
+	}
+	if (ini_read_real("Toppin", level + "6", false) == 0)
+	{
+		if (global.mushfollow)
+			global.newtoppin[5] = true;
+		ini_write_real("Toppin", level + "6", global.mushfollow);
+	}
+	if (ini_read_real("Toppin", level + "7", false) == 0)
+	{
+		if (global.onionfollow)
+			global.newtoppin[6] = true;
+		ini_write_real("Toppin", level + "7", global.onionfollow);
+	}
+	if (ini_read_real("Toppin", level + "8", false) == 0)
+	{
+		if (global.olivefollow)
+			global.newtoppin[7] = true;
+		ini_write_real("Toppin", level + "8", global.olivefollow);
+	}
+	if (ini_read_real("Toppin", level + "9", false) == 0)
+	{
+		if (global.brocollifollow)
+			global.newtoppin[8] = true;
+		ini_write_real("Toppin", level + "9", global.brocollifollow);
 	}
 	scr_write_rank(level);
 	obj_savesystem.ini_str = ini_close();

@@ -475,6 +475,7 @@ function scr_characterspr()
 	}
 	if (obj_player.character == "V")
 	{
+		 panicmusicID = fmod_event_create_instance("event:/music/yeehaw");
 		spr_idle = spr_playerV_idle
 		spr_move = spr_playerV_move
 		spr_crawl = spr_playerV_crouchmove

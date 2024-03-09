@@ -171,11 +171,23 @@ if (DEBUG)
 			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinpineapple);
 		if (!instance_exists(obj_pizzakinshroom))
 			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinshroom);
+		if (!instance_exists(obj_pizzakinmush))
+			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinmush);
+		if (!instance_exists(obj_pizzakinbrocolli))
+			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinbrocolli);
+		if (!instance_exists(obj_pizzakinonion))
+			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinonion);
+		if (!instance_exists(obj_pizzakinolive))
+			instance_create(obj_player1.x, obj_player1.y, obj_pizzakinolive);
 		global.cheesefollow = true;
 		global.tomatofollow = true;
 		global.sausagefollow = true;
 		global.pineapplefollow = true;
 		global.shroomfollow = true;
+	    global.olivefollow = true;
+	    global.onionfollow = true;
+	    global.brocollifollow = true;
+	    global.pepanimatronic = true;
 	});
 	PANIC = new DebugCommand("panic", "Toggles pizza time", "<fill>", function(fill)
 	{

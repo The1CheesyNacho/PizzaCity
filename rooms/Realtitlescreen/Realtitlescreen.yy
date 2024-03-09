@@ -45,6 +45,7 @@
     {"name":"inst_2686D47F","path":"rooms/Realtitlescreen/Realtitlescreen.yy",},
     {"name":"inst_4FBE9182","path":"rooms/Realtitlescreen/Realtitlescreen.yy",},
     {"name":"inst_38294B9D","path":"rooms/Realtitlescreen/Realtitlescreen.yy",},
+    {"name":"inst_A236944","path":"rooms/Realtitlescreen/Realtitlescreen.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -143,6 +144,7 @@
         {"$GMRInstance":"","%Name":"inst_2686D47F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2686D47F","objectId":{"name":"obj_consoledebug","path":"objects/obj_consoledebug/obj_consoledebug.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":-64.0,},
         {"$GMRInstance":"","%Name":"inst_4FBE9182","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4FBE9182","objectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":0.5,"x":1264.0,"y":368.0,},
         {"$GMRInstance":"","%Name":"inst_38294B9D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38294B9D","objectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":12.5,"scaleY":1.0,"x":384.0,"y":368.0,},
+        {"$GMRInstance":"","%Name":"inst_A236944","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A236944","objectId":{"name":"obj_peppermanNPC","path":"objects/obj_peppermanNPC/obj_peppermanNPC.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":336.0,"y":375.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_4C2C3552","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_4C2C3552","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"bg_mainmenu","path":"sprites/bg_mainmenu/bg_mainmenu.yy",},"x":128.0,"y":-48.0,},

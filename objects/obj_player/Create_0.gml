@@ -497,6 +497,10 @@ if (!variable_global_exists("saveroom"))
 	global.tomatofollow = false;
 	global.sausagefollow = false;
 	global.pineapplefollow = false;
+	global.mushfollow = false;
+	global.olivefollow = false;
+	global.onionfollow = false;
+	global.brocollifollow = false;
 	global.pepanimatronic = false;
 	global.keyget = false;
 	global.collect = 0;

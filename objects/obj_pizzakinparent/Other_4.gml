@@ -21,4 +21,20 @@ switch (object_index)
 		if (!global.sausagefollow)
 			instance_destroy();
 		break;
+	case obj_pizzakinmush:
+		if (!global.mushfollow)
+			instance_destroy();
+		break
+	case obj_pizzakinbrocolli:
+		if (!global.brocollifollow)
+			instance_destroy();
+		break
+	case obj_pizzakinolive:
+	    if (!global.olivefollow)
+			instance_destroy();
+		break
+	case obj_pizzakinonion:
+	    if (!global.onionfollow)
+			instance_destroy();
+		break
 }
