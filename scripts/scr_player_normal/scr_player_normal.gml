@@ -534,7 +534,7 @@ if (character == "N")
 				image_index = 0;
 				state = states.mach3;
 				if (movespeed < 6)
-					movespeed = 6;
+					movespeed = 12;
 			}
 			if (global.kungfu && key_attack && state != states.handstandjump)
 			{
