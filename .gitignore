@@ -2,12 +2,8 @@ folders.csx
 refreshAssetlist.csx
 
 # Prolong my lifespan
-options/extensions/Steamworks.json
-datafiles/**
-extensions/fmod_gms/fmod-gamemaker.dll
 sprites/*/*.png
 sprites/*/*/*/*.png
-!options/main/template_icon.png
 !github/**
 
 # The manually fixed tilesets

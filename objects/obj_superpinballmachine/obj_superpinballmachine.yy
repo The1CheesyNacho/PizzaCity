@@ -6,8 +6,8 @@
   "name":"obj_superpinballmachine",
   "overriddenProperties":[],
   "parent":{
-    "name":"Unused",
-    "path":"folders/Objects/Controllers/Unused.yy",
+    "name":"Miscellaneous",
+    "path":"folders/Objects/Room Structure/Miscellaneous.yy",
   },
   "parentObjectId":null,
   "persistent":false,
