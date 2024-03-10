@@ -5,8 +5,9 @@ with (obj_player)
 	room = backtohubroom;
 	x = backtohubstartx;
 	y = backtohubstarty;
-	state = states.titlescreen;
-	targetDoor = "none";
+	state = states.normal;
+	targetDoor = "A";
+	targetRoom = Realtitlescreen;
     trace(room_get_name(backtohubroom), " ", x, " ", y)
 }
 global.exitrank = false;

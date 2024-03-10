@@ -132,3 +132,27 @@ if (obj_player1.key_jump && selected == 4 && obj_noiseselect.sprite_index != spr
 	}
 	alarm[0] = 100;
 }
+if (obj_player1.key_jump && selected == 5 && obj_peppinoselect.sprite_index != spr_peppinoselected)
+{
+	ready = true;
+	obj_peppinoselect.sprite_index = spr_peppinoselected;
+	obj_peppinoselect.image_index = 0;
+	with (obj_player1)
+	{
+		character = "S";
+		ispeppino = false;
+		scr_characterspr();
+	}
+	with (obj_player2)
+	{
+		character = "N";
+		ispeppino = false;
+		scr_characterspr();
+		if (global.coop == 1)
+		{
+			obj_noiseselect.sprite_index = spr_noiseselected;
+			obj_noiseselect.image_index = 0;
+		}
+	}
+	alarm[0] = 100;
+}

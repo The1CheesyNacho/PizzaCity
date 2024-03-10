@@ -150,4 +150,33 @@ function scr_player_handstandjump()
 			grav = 0.5;
 		}
 	}
+	if (character == "S")
+	{
+	    if key_attack
+	    {
+	        hsp = 0
+	        if (movespeed < 20)
+	            movespeed += 0.5
+	        if (movespeed == 20)
+	            sprite_index = spr_snick_superpeelout
+	        else if (movespeed < 20 && movespeed > 12)
+	            sprite_index = spr_snick_mach3
+	        else if (movespeed < 12 && movespeed > 8)
+	            sprite_index = spr_snick_mach2
+	        else
+	            sprite_index = spr_snick_walk
+	    }
+	    else if (movespeed >= 12)
+	        state = states.mach3
+	    else
+	    {
+	        state = states.normal
+	        movespeed = 0
+	    }
+	    if ((!instance_exists(obj_dashcloud2)) && grounded && movespeed > 5)
+	    {
+	        with (instance_create(x, y, obj_dashcloud2))
+	            image_xscale = other.xscale
+	    }
+	}
 }

@@ -53,7 +53,14 @@ if (ready == 0)
 		else if (gp_connected)
 			draw_sprite(spr_player2cursor_start, -1, random_range(-1, 1) + 344, random_range(-1, 1) + 94);
 	}
-
+	if (selected == 5)
+	{
+		draw_sprite(spr_player1cursor, -1, 344, 94);
+		if (global.coop == 1)
+			draw_sprite(spr_player2cursor, -1, 528, 94);
+		else if (gp_connected)
+			draw_sprite(spr_player2cursor_start, -1, random_range(-1, 1) + 528, random_range(-1, 1) + 94);
+	}
 }
 else
 {
@@ -86,5 +93,11 @@ else
 		draw_sprite(spr_player1cursorselected, -1, 528, 94);
 		if (global.coop == 1)
 			draw_sprite(spr_player2cursorselected, -1, 344, 94);
+	}
+	if (selected == 5)
+	{
+		draw_sprite(spr_player1cursorselected, -1, 344, 94);
+		if (global.coop == 1)
+			draw_sprite(spr_player2cursorselected, -1, 528, 94);
 	}
 }

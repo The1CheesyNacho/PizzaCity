@@ -31,7 +31,7 @@ if (DEBUG)
 	{
 		with (obj_player)
 		{
-			character = "N";
+			character = "PM";
 			scr_characterspr();
 		}
 	});

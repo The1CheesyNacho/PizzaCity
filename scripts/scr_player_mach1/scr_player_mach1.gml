@@ -44,7 +44,8 @@ function scr_player_mach1()
 			particle_set_scale(particle.jumpdust, xscale, 1);
 			create_particle(x, y, particle.jumpdust, 0);
 		}
-		
+
+	
 		if (vsp > 0)
 			jumpstop = false;
 		if (!instance_exists(dashcloudid))
@@ -157,5 +158,11 @@ function scr_player_mach1()
 			}
 		}
 	}
+	if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character == "S" && grounded)
+	{
+	    state = states.handstandjump
+	    movespeed = 0
+	}
+	
 	scr_dotaunt();
 }

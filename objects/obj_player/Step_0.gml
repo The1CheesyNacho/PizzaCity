@@ -1231,7 +1231,7 @@ if (character == "S")
 	if (state == states.crouchjump || state == states.crouch)
 		state = states.normal;
 }
-if (character != "M")
+if (character != "PM")
 {
 	if (!scr_solid_player(x, y))
 	{
@@ -1243,8 +1243,10 @@ if (character != "M")
 	else
 		mask_index = spr_crouchmask;
 }
-else
-	mask_index = spr_pepperman_mask;
+else if (character == "PM")
+{
+		mask_index = spr_pepperman_mask;
+}
 if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.dead || state == states.gotoplayer || state == states.policetaxi || state == states.actor || (collision_flags & colflag.secret) > 0)
 	cutscene = true;
 else

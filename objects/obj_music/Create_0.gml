@@ -15,6 +15,24 @@ pillarmusicID = fmod_event_create_instance("event:/music/pillarmusic");
 kidspartychaseID = fmod_event_create_instance("event:/music/w5/kidspartychase");
 panicstart = false;
 
+
+switch (obj_player.character){
+	case "N":
+	case "S":
+	case "G":
+	case "P":
+		panicmusicID = fmod_event_create_instance("event:/music/pizzatime");
+	break;
+	case "V":
+		panicmusicID = fmod_event_create_instance("event:/music/yeehaw");
+	break;
+	case "PM":
+		panicmusicID = fmod_event_create_instance("event:/music/pepperohio");
+	break;
+}
+
+
+
 add_music(pinball_1, "event:/music/w3/space", "event:/music/w3/spacesecret", 0)
 add_music(exit_1, "event:/music/finalescape", -4, false);
 add_music(dragonlair_1, "event:/music/dragonlair", -4, false);

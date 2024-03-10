@@ -2,6 +2,7 @@ function scr_player_Sjumpprep()
 {
 	switch (character)
 	{
+		case "PM":
 		case "P":
 			if (sprite_index == spr_superjumppreplight || sprite_index == spr_superjumpright || sprite_index == spr_superjumpleft)
 				move = key_left + key_right;

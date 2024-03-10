@@ -1,7 +1,7 @@
 function scr_player_shoulderbash()
 {
-	movespeed = (sprite_index == spr_pepperman_shoulderstart) ? shoulderbash_mspeed_start : Approach(movespeed, shoulderbash_mspeed_loop, 0.5);
-	hsp = xscale * movespeed;
+	movespeed = 1
+	hsp += movespeed * xscale;
 	if (!instance_exists(chargeeffectid))
 	{
 		with (instance_create(x + 5, y - 5, obj_chargeeffect))
@@ -16,10 +16,13 @@ function scr_player_shoulderbash()
 	if (sprite_index == spr_pepperman_shoulderloop && !key_attack)
 	{
 		state = states.normal;
-		image_index = 0;
 	}
 	if (grounded)
 		jumpstop = false;
+	if (key_up)
+	{
+		state = states.Sjumpprep;
+	}
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
 	{
 		vsp /= 60;

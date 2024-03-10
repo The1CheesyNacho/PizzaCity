@@ -2,6 +2,7 @@ function scr_player_climbwall()
 {
 	switch (character)
 	{
+		case "PM":
 		case "P":
 			if (windingAnim < 200)
 				windingAnim++;

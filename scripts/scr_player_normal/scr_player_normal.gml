@@ -368,6 +368,24 @@ if (character == "N")
 		else if (global.pistol)
 			scr_pistolshoot(states.normal);
 	}
+	switch (character)
+	{
+		case "P":
+			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
+			{
+				sprite_index = spr_mach1;
+				image_index = 0;
+				state = states.mach2;
+				if (movespeed < 6)
+					movespeed = 6;
+			}
+			if (global.kungfu && key_attack && state != states.handstandjump)
+			{
+				state = states.blockstance;
+				sprite_index = spr_player_airattack;
+				hsp = 0;
+				movespeed = 0;
+			}
 	if (input_buffer_slap > 0 && !key_up && shotgunAnim == 0 && !global.pistol)
 	{
 		input_buffer_slap = 0;
@@ -392,24 +410,6 @@ if (character == "N")
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
 	}
-	switch (character)
-	{
-		case "P":
-			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
-			{
-				sprite_index = spr_mach1;
-				image_index = 0;
-				state = states.mach2;
-				if (movespeed < 6)
-					movespeed = 6;
-			}
-			if (global.kungfu && key_attack && state != states.handstandjump)
-			{
-				state = states.blockstance;
-				sprite_index = spr_player_airattack;
-				hsp = 0;
-				movespeed = 0;
-			}
 			break;
 		case "N":
 			if (key_shoot2 && !instance_exists(dynamite_inst))
@@ -457,6 +457,30 @@ if (character == "N")
 				hsp = 0;
 				movespeed = 0;
 			}
+	if (input_buffer_slap > 0 && !key_up && shotgunAnim == 0 && !global.pistol)
+	{
+		input_buffer_slap = 0;
+		sprite_index = spr_suplexdash;
+		suplexmove = true;
+		particle_set_scale(particle.jumpdust, xscale, 1);
+		create_particle(x, y, particle.jumpdust, 0);
+		fmod_event_instance_play(suplexdashsnd);
+		state = states.handstandjump;
+		movespeed = 8;
+		image_index = 0;
+	}
+	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && !global.pistol)
+	{
+		state = states.punch;
+		input_buffer_slap = 0;
+		image_index = 0;
+		sprite_index = spr_player_breakdanceuppercut;
+		fmod_event_instance_play(snd_uppercut);
+		vsp = -14;
+		movespeed = hsp;
+		particle_set_scale(particle.highjumpcloud2, xscale, 1);
+		create_particle(x, y, particle.highjumpcloud2, 0);
+	}
 			break;
 		case "V":
 			if (key_attack && !place_meeting(x + xscale, y, obj_solid))
@@ -502,6 +526,51 @@ if (character == "N")
 				image_index = 0;
 				state = states.revolver;
 			}
+			break;
+		case "PM":
+			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
+			{
+				sprite_index = spr_mach1;
+				image_index = 0;
+				state = states.mach2;
+				if (movespeed < 6)
+					movespeed = 6;
+			}
+			if (global.kungfu && key_attack && state != states.handstandjump)
+			{
+				state = states.blockstance;
+				sprite_index = spr_player_airattack;
+				hsp = 0;
+				movespeed = 0;
+			}
+	if (input_buffer_slap > 0 && !key_up && shotgunAnim == 0 && !global.pistol)
+	{
+		input_buffer_slap = 0;
+		particle_set_scale(particle.jumpdust, xscale, 1);
+		create_particle(x, y, particle.jumpdust, 0);
+		fmod_event_instance_play(suplexdashsnd);
+		state = states.slap;
+		image_index = 0;
+	}
+	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && !global.pistol)
+	{
+		state = states.punch;
+		input_buffer_slap = 0;
+		image_index = 0;
+		sprite_index = spr_player_breakdanceuppercut;
+		fmod_event_instance_play(snd_uppercut);
+		vsp = -14;
+		movespeed = hsp;
+		particle_set_scale(particle.highjumpcloud2, xscale, 1);
+		create_particle(x, y, particle.highjumpcloud2, 0);
+	}
+			break;
+		case "S":
+	if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character == "S" && grounded)
+	{
+	    state = states.handstandjump
+	    movespeed = 0
+	}
 			break;
 	}
 	scr_dotaunt();
@@ -581,6 +650,34 @@ function state_pepperman_normal()
 		fmod_event_instance_play(suplexdashsnd);
 		state = states.slap;
 		image_index = 0;
+	}
+	
+
+	if (character == "S")
+	{
+	    if (machslideAnim == 0)
+	    {
+	        if (move == 0)
+	        {
+	            if (idle < 400)
+	                idle++
+	            if (idle >= 100 && floor(image_index) == (image_number - 1))
+	            {
+	                idle = 0
+	                image_index = 0
+	            }
+	            if (idle >= 100 && sprite_index != spr_idle1)
+	                sprite_index = spr_idle1
+	            if (idle < 100)
+	                sprite_index = spr_idle
+	        }
+	        if (move != 0)
+	        {
+	            machslideAnim = 0
+	            sprite_index = spr_move
+	            xscale = move
+	        }
+	    }
 	}
 	
 	

@@ -384,6 +384,7 @@ if (key_jump)
 	}
 	switch (character)
 	{
+		case "PM":
 		case "P":
 			if (key_attack && grounded && fallinganimation < 40)
 			{

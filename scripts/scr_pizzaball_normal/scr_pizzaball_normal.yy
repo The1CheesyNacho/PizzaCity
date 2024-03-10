@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_pizzaball_normal",
   "parent":{
-    "name":"States",
-    "path":"folders/Scripts/Baddies/States.yy",
+    "name":"Cutscene",
+    "path":"folders/Scripts/Cutscene.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
