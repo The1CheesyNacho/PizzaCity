@@ -532,7 +532,7 @@ if (character == "N")
 			{
 				sprite_index = spr_mach1;
 				image_index = 0;
-				state = states.mach2;
+				state = states.mach3;
 				if (movespeed < 6)
 					movespeed = 6;
 			}
