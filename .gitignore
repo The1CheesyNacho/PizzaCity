@@ -95,6 +95,8 @@ sprites/*/100.png
 sprites/*/*/*/*.png
 !github/**
 
+!sprites/bg_ball4326/*.png
+!sprites/bg_tutorial/*.png
 # The manually fixed tilesets
 !sprites/tile_beachprops1/**
 !sprites/tile_beachprops2/**

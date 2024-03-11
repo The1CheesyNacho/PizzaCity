@@ -1,3 +1,49 @@
+function scr_get_tutorial_key(char)
+{
+	var spr = -4;
+	var ix = 0;
+	var txt = -4;
+	switch (char)
+	{
+		case vk_left:
+			spr = spr_tutorialgamepad;
+			ix = 16;
+			break;
+		case vk_right:
+			spr = spr_tutorialgamepad;
+			ix = 17;
+			break;
+		case vk_up:
+			spr = spr_tutorialgamepad;
+			ix = 4;
+			break;
+		case vk_down:
+			spr = spr_tutorialgamepad;
+			ix = 5;
+			break;
+		case vk_shift:
+		case vk_lshift:
+			spr = spr_tutorialkeyspecial;
+			ix = 0;
+			break;
+		case vk_control:
+		case vk_lcontrol:
+			spr = spr_tutorialkeyspecial;
+			ix = 1;
+			break;
+		case vk_space:
+			spr = spr_tutorialkeyspecial;
+			ix = 2;
+			break;
+		default:
+			spr = spr_tutorialkey;
+			ix = 0;
+			txt = chr(char);
+			break;
+	}
+	return [spr, ix, txt];
+}
+
 function scr_string_width(argument0) //gml_Script_scr_string_width
 {
     var pos = 0

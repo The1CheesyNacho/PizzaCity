@@ -1,0 +1,2 @@
+sprite_index = spr_cheftaskdoor_gold
+targetRoom = tower_johngutterhall
