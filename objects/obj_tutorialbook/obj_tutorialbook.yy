@@ -32,7 +32,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_tutorialgranny_sleep",
     "path": "sprites/spr_tutorialgranny_sleep/spr_tutorialgranny_sleep.yy",

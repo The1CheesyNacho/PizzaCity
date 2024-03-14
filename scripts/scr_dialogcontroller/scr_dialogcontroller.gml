@@ -108,7 +108,7 @@ function scr_calculate_text(argument0) //gml_Script_scr_calculate_text
     {
         pos++
         str2 = string_insert(string_char_at(argument0, pos), str2, (string_length(str2) + 1))
-        str2 = scr_separate_text(str2)
+        str2 = scr_separate_text(str2, font, (text_sprite_width * text_xscale) - (text_contentpad * 2));
     }
     return str2;
 }

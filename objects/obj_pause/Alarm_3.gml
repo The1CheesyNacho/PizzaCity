@@ -17,8 +17,8 @@ if (!hub)
 	global.leveltorestart = -4;
 	scr_playerreset();
 	alarm[0] = 2;
-	obj_player1.state = states.normal;
-	obj_player2.state = states.normal;
+	obj_player1.state = states.titlescreen;
+	obj_player2.state = states.titlescreen;
 	obj_player1.targetDoor = "A";
 	if (instance_exists(obj_player2))
 		obj_player2.targetDoor = "A";

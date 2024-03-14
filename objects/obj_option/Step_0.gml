@@ -1,5 +1,5 @@
 var j = 0;
-var m = typesmenus[menu];
+var m = menus[menu];
 
 if instance_exists(obj_keyconfig)
 	j = 4;

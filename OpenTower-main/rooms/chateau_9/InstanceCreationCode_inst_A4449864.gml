@@ -1,1 +1,0 @@
-scr_custom_notification_destructibles()

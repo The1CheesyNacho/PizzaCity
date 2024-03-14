@@ -1,1 +1,0 @@
-targetRoom = pizzaland_1;

@@ -1,2 +1,0 @@
-hurted = false;
-hurtfx = false;

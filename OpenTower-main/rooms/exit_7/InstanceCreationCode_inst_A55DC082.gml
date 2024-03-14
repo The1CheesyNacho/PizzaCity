@@ -1,1 +1,0 @@
-targetRoom = exit_1;

@@ -1,2 +1,0 @@
-comeback = true;
-wait = false;

@@ -1,1 +1,0 @@
-ID = obj_null;

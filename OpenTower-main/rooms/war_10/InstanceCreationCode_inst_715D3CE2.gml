@@ -1,2 +1,0 @@
-escape = true;
-escapestun = false;

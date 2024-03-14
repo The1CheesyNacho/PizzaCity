@@ -1,2 +1,0 @@
-active = false;
-start = false;

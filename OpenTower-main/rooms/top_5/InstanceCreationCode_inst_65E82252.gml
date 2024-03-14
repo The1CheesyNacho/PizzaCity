@@ -1,1 +1,0 @@
-spinspeed = 6;

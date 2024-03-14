@@ -1,1 +1,0 @@
-targetRoom = kungfu_8;

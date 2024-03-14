@@ -250,7 +250,6 @@ function scr_getallrooms()
 		forest_G5, 
 		minigolf_1, 
 		minigolf_2, 
-		minigolf_3, 
 		minigolf_4, 
 		minigolf_5, 
 		minigolf_6, 
