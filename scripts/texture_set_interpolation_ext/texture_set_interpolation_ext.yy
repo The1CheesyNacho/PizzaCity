@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"texture_set_interpolation_ext",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"texture_set_interpolation_ext",
-  "parent":{
-    "name":"Texture",
-    "path":"folders/Scripts/Compatibility/Texture.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "texture_set_interpolation_ext",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Texture",
+    "path": "folders/Scripts/Compatibility/Texture.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

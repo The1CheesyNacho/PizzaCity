@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"scr_enemy_turn",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"scr_enemy_turn",
-  "parent":{
-    "name":"States",
-    "path":"folders/Scripts/Baddies/States.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_enemy_turn",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "States",
+    "path": "folders/Scripts/Baddies/States.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

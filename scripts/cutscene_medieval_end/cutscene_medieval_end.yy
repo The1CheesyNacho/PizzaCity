@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"cutscene_medieval_end",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"cutscene_medieval_end",
-  "parent":{
-    "name":"Cutscene",
-    "path":"folders/Scripts/Cutscene.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "cutscene_medieval_end",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Cutscene",
+    "path": "folders/Scripts/Cutscene.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

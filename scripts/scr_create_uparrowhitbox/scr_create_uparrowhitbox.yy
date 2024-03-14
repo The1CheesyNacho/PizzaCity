@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"scr_create_uparrowhitbox",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"scr_create_uparrowhitbox",
-  "parent":{
-    "name":"Shortcuts",
-    "path":"folders/Scripts/General/Shortcuts.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_create_uparrowhitbox",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Shortcuts",
+    "path": "folders/Scripts/General/Shortcuts.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

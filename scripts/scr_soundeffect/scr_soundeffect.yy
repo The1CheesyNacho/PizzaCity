@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"scr_soundeffect",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"scr_soundeffect",
-  "parent":{
-    "name":"Audio (old)",
-    "path":"folders/Scripts/Systems/Audio (old).yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_soundeffect",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Audio (old)",
+    "path": "folders/Scripts/Systems/Audio (old).yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

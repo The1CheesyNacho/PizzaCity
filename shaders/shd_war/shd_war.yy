@@ -1,12 +1,10 @@
 {
-  "$GMShader":"",
-  "%Name":"shd_war",
-  "name":"shd_war",
-  "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+  "resourceType": "GMShader",
+  "resourceVersion": "1.0",
+  "name": "shd_war",
+  "parent": {
+    "name": "Shaders",
+    "path": "folders/Shaders.yy",
   },
-  "resourceType":"GMShader",
-  "resourceVersion":"2.0",
-  "type":1,
+  "type": 1,
 }

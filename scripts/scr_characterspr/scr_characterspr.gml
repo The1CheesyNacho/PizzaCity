@@ -722,7 +722,7 @@ function scr_characterspr()
 		spr_charge = spr_player_charge
 		spr_mach3jump = spr_pepperman_shoulderhurt
 		spr_mach4 = spr_pepperman_shoulderloop
-		spr_machclimbwall = spr_pepperman_shoulderloop
+		spr_machclimbwall = spr_pepperman_climbwall
 		spr_dive = spr_player_dive
 		spr_machroll = spr_player_machroll
 		spr_hitwall = spr_player_mach3hitwall

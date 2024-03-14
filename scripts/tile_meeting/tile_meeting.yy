@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"tile_meeting",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"tile_meeting",
-  "parent":{
-    "name":"General",
-    "path":"folders/Scripts/General.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "tile_meeting",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "General",
+    "path": "folders/Scripts/General.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

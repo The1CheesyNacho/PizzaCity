@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"scr_panicbg_init",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"scr_panicbg_init",
-  "parent":{
-    "name":"Background",
-    "path":"folders/Scripts/General/Background.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_panicbg_init",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Background",
+    "path": "folders/Scripts/General/Background.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }

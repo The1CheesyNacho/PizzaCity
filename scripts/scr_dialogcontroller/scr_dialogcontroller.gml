@@ -79,24 +79,24 @@ function scr_string_width(argument0) //gml_Script_scr_string_width
     return w;
 }
 
-function scr_separate_text(argument0) //gml_Script_scr_separate_text
+function scr_separate_text(str, font, width)
 {
-    draw_set_font(font2)
-    while (scr_string_width(argument0) > ((obj_camera.original_cam_width - (rpadding * 2)) - string_width("a")))
-    {
-        var _pos = string_length(argument0)
-        var _oldpos = _pos
-        while (string_char_at(argument0, _pos) != " ")
-        {
-            _pos--
-            if (_pos < 0)
-                _pos = _oldpos
-        }
-        if (string_char_at(argument0, _pos) == " ")
-            argument0 = string_delete(argument0, _pos, 1)
-        argument0 = string_insert("\n", argument0, _pos)
-    }
-    return argument0;
+	draw_set_font(font);
+	while (scr_string_width(str) > (width - string_width("a")))
+	{
+		var _pos = string_length(str);
+		var _oldpos = _pos;
+		while (string_char_at(str, _pos) != " ")
+		{
+			_pos--;
+			if (_pos < 0)
+				_pos = _oldpos;
+		}
+		if (string_char_at(str, _pos) == " ")
+			str = string_delete(str, _pos, 1);
+		str = string_insert("\n", str, _pos);
+	}
+	return str;
 }
 
 function scr_calculate_text(argument0) //gml_Script_scr_calculate_text

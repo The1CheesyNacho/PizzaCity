@@ -1,13 +1,11 @@
 {
-  "$GMScript":"",
-  "%Name":"scr_noiseboss_states",
-  "isCompatibility":false,
-  "isDnD":false,
-  "name":"scr_noiseboss_states",
-  "parent":{
-    "name":"Boss",
-    "path":"folders/Scripts/Baddies/Boss.yy",
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "scr_noiseboss_states",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Boss",
+    "path": "folders/Scripts/Baddies/Boss.yy",
   },
-  "resourceType":"GMScript",
-  "resourceVersion":"2.0",
 }
