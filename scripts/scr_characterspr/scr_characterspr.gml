@@ -646,7 +646,7 @@ function scr_characterspr()
 	}
 	if (character == "PM")
 	{
-		spr_idle = spr_PlayerPM_idle
+		spr_idle = spr_playerPM_idle
 		spr_move = spr_playerPM_move
 		spr_crawl = spr_playerPM_rolling
 		spr_hurt = spr_player_hurt

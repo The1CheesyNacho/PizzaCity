@@ -104,12 +104,12 @@ function scr_pepperman_arenaintro()
 		if (introbuffer > 0)
 		{
 			introbuffer--;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_PlayerPM_intro2)
+			if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerPM_intro2)
 				image_index = image_number - 1;
 		}
 		else if (sprite_index == spr_playerPM_intro1)
 		{
-			sprite_index = spr_PlayerPM_intro2;
+			sprite_index = spr_playerPM_intro2;
 			image_index = 0;
 			introbuffer = 70;
 			with (obj_player)
@@ -118,9 +118,9 @@ function scr_pepperman_arenaintro()
 				image_index = 0;
 			}
 		}
-		else if (sprite_index == spr_PlayerPM_intro2)
+		else if (sprite_index == spr_playerPM_intro2)
 		{
-			sprite_index = spr_PlayerPM_intro3;
+			sprite_index = spr_playerPM_intro3;
 			image_index = 0;
 			fmod_event_one_shot_3d("event:/sfx/voice/peppermanlaugh", x, y);
 			with (obj_player)
@@ -134,14 +134,14 @@ function scr_pepperman_arenaintro()
 		{
 			switch (sprite_index)
 			{
-				case spr_PlayerPM_intro3:
+				case spr_playerPM_intro3:
 					sprite_index = spr_playerPM_intro3loop;
 					introbuffer = 130;
 					break;
 				case spr_playerPM_intro3loop:
-					sprite_index = spr_PlayerPM_intro3end;
+					sprite_index = spr_playerPM_intro3end;
 					break;
-				case spr_PlayerPM_intro3end:
+				case spr_playerPM_intro3end:
 					state = states.walk;
 					spotlightID.expand = true;
 					with (obj_player)
@@ -574,9 +574,9 @@ function scr_pepperman_mini()
 				if (sprite_index == spr_playerPM_ministart)
 				{
 					ministate = states.normal;
-					sprite_index = spr_PlayerPM_miniidle;
+					sprite_index = spr_playerPM_miniidle;
 				}
-				else if (sprite_index == spr_PlayerPM_miniend)
+				else if (sprite_index == spr_playerPM_miniend)
 				{
 					state = states.walk;
 					sprite_index = spr_playerPM_idle;
@@ -594,12 +594,12 @@ function scr_pepperman_mini()
 				sprite_index = spr_playerPM_minimove;
 			}
 			else
-				sprite_index = spr_PlayerPM_miniidle;
+				sprite_index = spr_playerPM_miniidle;
 			if (!grounded)
 			{
 				ministate = states.jump;
 				attackspeed = abs(hsp);
-				sprite_index = spr_PlayerPM_minifall;
+				sprite_index = spr_playerPM_minifall;
 			}
 			else if (minibuffer > 0)
 			{
@@ -609,7 +609,7 @@ function scr_pepperman_mini()
 					vsp = -15;
 					if targetplayer.x != x
 						image_xscale = sign(targetplayer.x - x);
-					sprite_index = spr_PlayerPM_minijump;
+					sprite_index = spr_playerPM_minijump;
 					image_index = 0;
 					fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
 					attackspeed = 10;
@@ -619,7 +619,7 @@ function scr_pepperman_mini()
 			if (minibuffer <= 0)
 			{
 				ministate = states.transition;
-				sprite_index = spr_PlayerPM_miniend;
+				sprite_index = spr_playerPM_miniend;
 				image_index = 0;
 				vsp = 0;
 				hsp = 0;
@@ -627,8 +627,8 @@ function scr_pepperman_mini()
 			break;
 		case states.jump:
 			hsp = image_xscale * attackspeed;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_PlayerPM_minijump)
-				sprite_index = spr_PlayerPM_minifall;
+			if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerPM_minijump)
+				sprite_index = spr_playerPM_minifall;
 			if (grounded && vsp > 0)
 				ministate = states.normal;
 			break;

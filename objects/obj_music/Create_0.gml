@@ -253,15 +253,15 @@ add_music(kidsparty_1, "event:/music/w5/kidsparty", "event:/music/w5/kidspartyse
 add_music(war_1, "event:/music/w5/war", "event:/music/w5/warsecret", 0)
 
 
-add_music(mansion_plain, "event:/music/mansion", "event:/music/w1/dungeonsecret", 0, function(room, event, event_secret) //anon_gml_Object_obj_music_Create_0_3410_gml_Object_obj_music_Create_0
+add_music(mansion_1, "event:/music/mansion", "event:/music/w1/dungeonsecret", 0, function(room, event, event_secret) //anon_gml_Object_obj_music_Create_0_3410_gml_Object_obj_music_Create_0
 {
 	s = -1
 	switch room
 	{
-		case mansion_plain:
+		case mansion_1:
 			s = 0
 			break
-		case mansion_3:
+		case mansion_2:
 			s = 1
 			break
 		case mansion_9:

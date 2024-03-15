@@ -39,9 +39,9 @@ function scr_enemy_stun()
 	{
 		if (thrown)
 			sprite_index = spr_dead;
-		else if (sprite_index != spr_playerPM_shoulderhurt && sprite_index != spr_PlayerPM_shoulderhurtstart)
+		else if (sprite_index != spr_playerPM_shoulderhurt && sprite_index != spr_playerPM_shoulderhurtstart)
 			sprite_index = stunfallspr;
-		if (sprite_index == spr_PlayerPM_shoulderhurtstart && floor(image_index) == (image_number - 1))
+		if (sprite_index == spr_playerPM_shoulderhurtstart && floor(image_index) == (image_number - 1))
 			sprite_index = spr_playerPM_shoulderhurt;
 	}
 	else if (object_index == obj_fakepepboss || object_index == obj_pf_fakepep)

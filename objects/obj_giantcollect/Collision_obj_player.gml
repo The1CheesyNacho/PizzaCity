@@ -29,13 +29,4 @@ if (other.state != states.gotoplayer)
 	with (instance_create(x + 16, y, obj_smallnumber))
 		number = string(val);
 	instance_destroy();
-	if (secret && !instance_exists(obj_fadeout))
-	{
-		with (obj_player)
-		{
-			targetRoom = lastroom;
-			targetDoor = "S";
-		}
-		instance_create(x, y, obj_fadeout);
-	}
 }

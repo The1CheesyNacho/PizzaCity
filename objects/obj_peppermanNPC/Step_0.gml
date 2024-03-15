@@ -11,7 +11,7 @@ if (showgranny)
 		voicecooldown = 0;
 	if (place_meeting(x, y, obj_player))
 	{
-		sprite_index = spr_playerPM_intro3loop;
+		sprite_index = sprite2;
 		if (voicecooldown == 0)
 		{
 			fmod_event_one_shot_3d("event:/sfx/voice/peppermanlaugh", x, y);
@@ -19,7 +19,7 @@ if (showgranny)
 		}
 	}
 	else
-		sprite_index = spr_playerPM_idle;
+		sprite_index = sprite1;
 }
 
 var _hide = false;
