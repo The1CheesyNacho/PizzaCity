@@ -13,7 +13,9 @@ if (showgranny)
 	{
 		sprite_index = sprite2;
 		if (voicecooldown == 0)
-		{
+		{   if room == mansion_1 && interactedmansion == 0
+			{other.cutscene = true;
+			alarm[11] = 150;}
 			fmod_event_one_shot_3d("event:/sfx/voice/peppermanlaugh", x, y);
 			voicecooldown = 100;
 		}

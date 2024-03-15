@@ -2,6 +2,7 @@ image_speed = 0.35;
 mask_index = spr_playerPM_idle;
 show = false;
 donepanic = false;
+interactedmansion = 0;
 wave_timer = 0;
 sprite1 = spr_playerPM_idle;
 sprite2 = spr_playerPM_intro3loop;
