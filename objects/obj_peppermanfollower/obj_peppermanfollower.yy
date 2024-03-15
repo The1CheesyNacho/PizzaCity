@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_pepperman_scared",
-    "path": "sprites/spr_pepperman_scared/spr_pepperman_scared.yy",
+    "name": "spr_playerPM_scared",
+    "path": "sprites/spr_playerPM_scared/spr_playerPM_scared.yy",
   },
   "spriteMaskId": null,
   "visible": true,

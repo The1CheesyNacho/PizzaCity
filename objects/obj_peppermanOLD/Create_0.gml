@@ -17,13 +17,13 @@ ds_map_set(boss_hurtstates, states.superslam, 200);
 ds_map_set(boss_hurtstates, states.punch, 30);
 ds_map_set(boss_hurtstates, states.freefall, 70);
 
-stunfallspr = spr_pepperman_hurtplayer;
-walkspr = spr_pepperman_move;
-idlespr = spr_pepperman_idle;
-spr_dead = spr_pepperman_timesup;
-tauntspr = spr_pepperman_taunt;
-fallspr = spr_pepperman_fall;
-defeatplayerspr = spr_pepperman_shoulderstart;
+stunfallspr = spr_playerPM_hurt;
+walkspr = spr_playerPM_move;
+idlespr = spr_playerPM_idle;
+spr_dead = spr_playerPM_timesup;
+tauntspr = spr_playerPM_taunt;
+fallspr = spr_playerPM_fall;
+defeatplayerspr = spr_playerPM_shoulderstart;
 normal_spd = 6;
 shoulder_spd = 12;
 attack_max[0] = 120;
@@ -146,7 +146,7 @@ function player_hurt(damage, player)
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
-			sprite_index = spr_pepperman_throw;
+			sprite_index = spr_playerPM_throw;
 			image_index = 0;
 			hitstate = states.parry;
 			hitvsp = 0;

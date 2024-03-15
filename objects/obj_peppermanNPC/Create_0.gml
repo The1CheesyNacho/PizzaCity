@@ -1,5 +1,5 @@
 image_speed = 0.35;
-mask_index = spr_pepperman_idle;
+mask_index = spr_playerPM_idle;
 show = false;
 donepanic = false;
 wave_timer = 0;

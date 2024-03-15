@@ -237,7 +237,7 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 }
 if (state == states.stun)
 {
-	if (wastedhits >= 7 && sprite_index == spr_pepperman_shoulderhurt && grounded && vsp > 0 && !thrown && stunned > 10)
+	if (wastedhits >= 7 && sprite_index == spr_playerPM_shoulderhurt && grounded && vsp > 0 && !thrown && stunned > 10)
 		stunned = 1;
 	if (thrown)
 		savedthrown = true;

@@ -8,7 +8,7 @@ else
 	cooldown = 40;
 if (flickertime > 0)
 {
-	if (sprite_index == spr_pepperman_ministart)
+	if (sprite_index == spr_playerPM_ministart)
 		touchedground = true;
 	if (touchedground)
 		flickertime--;

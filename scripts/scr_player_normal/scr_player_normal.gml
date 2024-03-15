@@ -530,8 +530,7 @@ if (character == "N")
 		case "PM":
 			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
 			{
-				sprite_index = spr_mach1;
-				image_index = 0;
+				sprite_index = spr_playerPM_shoulderstart;
 				state = states.mach3;
 				if (movespeed < 6)
 					movespeed = 12;
@@ -599,7 +598,7 @@ function state_pepperman_normal()
 	if (move != 0 && movespeed == 0)
 		xscale = move;
 	hsp = xscale * movespeed;
-	if (sprite_index != spr_pepperman_throw)
+	if (sprite_index != spr_playerPM_throw)
 	{
 		if (hsp != 0)
 			sprite_index = spr_move;
@@ -622,16 +621,16 @@ function state_pepperman_normal()
 		state = states.jump;
 		sprite_index = spr_fall;
 	}
-	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw)
+	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_playerPM_throw)
 	{
 		if (move != 0)
 			xscale = move;
 		state = states.shoulderbash;
-		sprite_index = spr_pepperman_shoulderstart;
+		sprite_index = spr_playerPM_shoulderstart;
 		image_index = 0;
 	}
-	if (sprite_index == spr_pepperman_throw && floor(image_index) == (image_number - 1))
-		sprite_index = spr_pepperman_idle;
+	if (sprite_index == spr_playerPM_throw && floor(image_index) == (image_number - 1))
+		sprite_index = spr_playerPM_idle;
 	if (move != 0 && (floor(image_index) == 4 || floor(image_index) == 11) && steppy == 0 && character != "V")
 	{
 		instance_create(x, y + 38, obj_cloudeffect);

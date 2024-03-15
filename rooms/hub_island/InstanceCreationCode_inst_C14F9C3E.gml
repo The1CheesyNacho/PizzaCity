@@ -21,7 +21,7 @@ else if (global.levelcomplete && !global.beachcutscene && global.levelcompletena
 		boatactorID.vsp = 0;
 		boatactorID.hsp = 0;
 		peppermanactorID = instance_create(boatactorID.x + (boatactorID.sprite_width / 2), boatactorID.y - 48, obj_actor);
-		peppermanactorID.sprite_index = spr_pepperman_idle;
+		peppermanactorID.sprite_index = spr_playerPM_idle;
 		cutscene_end_action();
 	}], [function()
 	{

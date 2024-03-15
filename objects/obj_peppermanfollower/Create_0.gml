@@ -1,4 +1,4 @@
 event_inherited();
-walkspr = spr_pepperman_move;
-idlespr = spr_pepperman_scared;
+walkspr = spr_playerPM_move;
+idlespr = spr_playerPM_scared;
 image_speed = 0.35;

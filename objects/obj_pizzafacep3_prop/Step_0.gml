@@ -12,7 +12,7 @@ if (use_collision)
 			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 			hsp = 0;
 			start = true;
-			if (sprite_index == spr_pepperman_scared)
+			if (sprite_index == spr_playerPM_scared)
 				fmod_event_one_shot_3d("event:/sfx/voice/peppermanscared", x, y);
 			if (sprite_index == spr_playerV_hurt)
 				fmod_event_one_shot_3d("event:/sfx/voice/vigiangry", x, y);

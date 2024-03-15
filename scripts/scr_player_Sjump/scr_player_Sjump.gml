@@ -32,7 +32,7 @@ function scr_player_Sjump()
 			piledrivereffect = 15;
 		}
 	}
-	if ((sprite_index == spr_superjump || sprite_index == spr_superspringplayer) && (character == "N" || character == "P"))
+	if ((sprite_index == spr_superjump || sprite_index == spr_superspringplayer) && (character == "N" || character == "P" || character == "PM" || character == "PM" || character == "PM"))
 		vsp = sjumpvsp;
 	sjumpvsp -= 0.1;
 	if (character == "V" && image_index > 3)

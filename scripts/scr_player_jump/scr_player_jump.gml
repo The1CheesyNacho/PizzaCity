@@ -527,16 +527,16 @@ function state_pepperman_jump()
 		vsp = 14;
 		sprite_index = spr_bodyslamfall;
 	}
-	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == -4 && sprite_index != spr_pepperman_throw)
+	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == -4 && sprite_index != spr_playerPM_throw)
 	{
 		if (move != 0)
 			xscale = move;
 		state = states.shoulderbash;
-		sprite_index = spr_pepperman_shoulderstart;
+		sprite_index = spr_playerPM_shoulderstart;
 		image_index = 0;
 	}
-	if (sprite_index == spr_pepperman_throw && floor(image_index) == (image_number - 1))
-		sprite_index = spr_pepperman_fall;
+	if (sprite_index == spr_playerPM_throw && floor(image_index) == (image_number - 1))
+		sprite_index = spr_playerPM_fall;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (key_taunt2)

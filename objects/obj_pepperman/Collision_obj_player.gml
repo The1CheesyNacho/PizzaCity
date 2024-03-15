@@ -10,7 +10,7 @@ if (state == states.shoulderbash && hsp != 0)
 		hsp = -image_xscale * 5;
 		vsp = -8;
 		stunned = 220;
-		sprite_index = spr_pepperman_shoulderhurtstart;
+		sprite_index = spr_playerPM_shoulderhurtstart;
 		image_index = 0;
 		image_speed = 0.35;
 		with (obj_camera)

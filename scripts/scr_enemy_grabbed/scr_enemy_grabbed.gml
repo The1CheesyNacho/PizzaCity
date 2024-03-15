@@ -440,7 +440,7 @@ function scr_enemy_grabbed()
 			state = states.stun;
 			hsp = image_xscale * 30;
 			vsp = -6;
-			_player.sprite_index = spr_pepperman_throw;
+			_player.sprite_index = spr_playerPM_throw;
 			_player.image_index = 0;
 			_player.pepperman_grabID = -4;
 		}
@@ -454,7 +454,7 @@ function scr_enemy_grabbed()
 			state = states.stun;
 			hsp = image_xscale * 2;
 			vsp = -20;
-			_player.sprite_index = spr_pepperman_throw;
+			_player.sprite_index = spr_playerPM_throw;
 			_player.image_index = 0;
 			_player.pepperman_grabID = -4;
 		}

@@ -11,9 +11,9 @@ function scr_player_shoulderbash()
 			depth = other.depth - 1;
 		}
 	}
-	if (sprite_index == spr_pepperman_shoulderstart && floor(image_index) == (image_number - 1))
-		sprite_index = spr_pepperman_shoulderloop;
-	if (sprite_index == spr_pepperman_shoulderloop && !key_attack)
+	if (sprite_index == spr_playerPM_shoulderstart && floor(image_index) == (image_number - 1))
+		sprite_index = spr_playerPM_shoulderloop;
+	if (sprite_index == spr_playerPM_shoulderloop && !key_attack)
 	{
 		state = states.normal;
 	}

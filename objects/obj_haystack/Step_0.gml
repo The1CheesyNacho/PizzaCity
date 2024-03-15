@@ -87,3 +87,7 @@ if (state == states.transition)
 		state = states.normal;
 	}
 }
+
+if (global.panic) {
+sprite_index = spr_haystackburning
+}
